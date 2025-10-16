@@ -16,3 +16,10 @@ def input_text(text):
 
 def swipe(x1, y1, x2, y2, duration=300):
     return run_adb(f"shell input swipe {x1} {y1} {x2} {y2} {duration}")
+
+if __name__ == "__main__":
+    print("Tapping screen at (500, 1200)...")
+    print(tap(500, 1200))
+
+    print("Typing text: hello.benny")
+    print(input_text("hello.benny"))
