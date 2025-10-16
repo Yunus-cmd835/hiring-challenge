@@ -17,6 +17,9 @@ def input_text(text):
 def swipe(x1, y1, x2, y2, duration=300):
     return run_adb(f"shell input swipe {x1} {y1} {x2} {y2} {duration}")
 
+def long_press(x, y, duration=2000):
+    return run_adb(f"shell input swipe {x} {y} {x} {y} {duration}")
+
 if __name__ == "__main__":
     print("Tapping screen at (500, 1200)...")
     print(tap(500, 1200))
